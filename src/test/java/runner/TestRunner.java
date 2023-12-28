@@ -8,14 +8,14 @@ import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import io.cucumber.junit.CucumberOptions.SnippetType;
 import utilities.LogHelper;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/features",
 		glue = "stepdefinitions",
-		plugin = {"json:test/report/cucumber_report.json"}
+//		plugin = {"json:test/report/cucumber_report.json"}
+		plugin = {"pretty","summary","html:target/CucumberReport.html"}
 
 		)
 

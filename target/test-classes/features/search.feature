@@ -5,24 +5,13 @@
 #Given: Some precondition step
 #When: Some key actions
 #Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
-#<> (placeholder)
-#""
-## (Comments)
-#Sample Feature Definition Template
-@tag
-Feature: Search
+@MercadoLibre
+Feature: Search functionality
   **Como** un cliente, cuando busco por Smartphone en el buscador de la plataforma de Mercado Libre
 	**quiero** saber si la tercera opción en la segunda página de resultados está disponible **para** comprar
 	(puede ser añadido al carrito).
 
-  @tag1
+  @Cart
   Scenario: Buscar tercera opción en mercadolibre
   Given El usuario está en la página principal de www.mercadolibre.com.ar
 	When Busca por palabra clave "Smartphone"

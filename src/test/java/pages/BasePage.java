@@ -152,10 +152,25 @@ public List<WebElement> bringMeAllElements(String locator){
     return driver.findElements(By.className(locator));
 }
 
-public void selectNthElementFromList(String locator, int index){
-    List<WebElement> list = driver.findElements(By.className(locator));
-    list.get(index).click();
+//public void selectNthElementFromList(String locator, int index){
+//    List<WebElement> list = driver.findElements(By.className(locator));
+//    list.get(index).click();
+//}
+
+public void selectNthElementFromList(String locator, int index) {
+    // Construye el selector de CSS para encontrar elementos con la clase específica dentro de la lista
+
+    List<WebElement> list = driver.findElements(By.cssSelector(locator));
+    
+    // Verifica que el índice esté dentro del rango de la lista
+    if (index >= 0 && index < list.size()) {
+        list.get(index).click();
+        System.out.println("Elemento en la posición " + index + " seleccionado correctamente.");
+    } else {
+        System.out.println("Índice fuera de rango. No se pudo seleccionar el elemento.");
+    }
 }
+
 
 public void dragAndDrop(String locator, String locator2){
     WebElement element = Find(locator);
