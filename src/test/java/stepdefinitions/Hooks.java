@@ -15,8 +15,7 @@ public class Hooks {
 	private static WebDriver driver;
 	private static int numberOfCase = 0;
     private DriverManager driverManager;
-//    public static long startTime;
-//    public static long endTime;
+
 
 
 
@@ -25,9 +24,6 @@ public class Hooks {
 
 		numberOfCase ++;
 		System.out.println("Se está ejecutando el escenario nro: " + numberOfCase);
-
-        // Registro de la hora de inicio
-//        startTime = System.currentTimeMillis();
 
 		//Con Controlador
 		driverManager = DriverManagerFactory.getManager(DriverType.FIREFOX);
@@ -43,18 +39,7 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot)driverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
         }
-
-        // Registro de la hora de fin
-//        long endTime = System.currentTimeMillis();
-
-        // Cálculo de la duración en milisegundos
-//        long duration = endTime - startTime;
-
 		System.out.println("El escenario nro: " + numberOfCase + "se ejecutó correctamente");
-//		System.out.println("Inicio de ejecución: " + new java.util.Date(startTime));
-//        System.out.println("Fin de ejecución: " + new java.util.Date(endTime));
-//        System.out.println("Duración de ejecución: " + duration + " milisegundos");
-
 		driverManager.quitDriver();
 	}
 
