@@ -24,10 +24,11 @@ Feature: Search
 
   @tag1
   Scenario: Buscar tercera opción en mercadolibre
-  Given el usuario está en la página principal de www.mercadolibre.com.ar
-	When Busca por “Smartphone”
+  Given El usuario está en la página principal de www.mercadolibre.com.ar
+	When Busca por palabra clave "Smartphone"
 	And Navega hacia la segunda página de resultados
 	And Selecciona el tercer ítem de la lista
 	Then El ítem está habilitado para comprar
+	
 
   
