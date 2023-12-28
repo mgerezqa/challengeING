@@ -28,6 +28,7 @@ Resultado esperado: <br>
 
 # Solución
 
+Para resolver el desafío se utilizó en el proyecto el lenguaje de programación **JAVA** y las librerías **Selenium** y **Cucumber**. <br>
 Se implementó el patrón de diseño Page Object Model , se estructuró el desafío de la siguiente manera:
 
 ### 
